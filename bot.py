@@ -1,11 +1,14 @@
 import os
 import random
 import telebot
+from flask import Flask
 from telebot import types
 from babel.numbers import format_currency
 
 Token = os.environ.get("CHAVE_API")
 bot = telebot.TeleBot(Token)
+
+app = Flask(__name__)
 
 pizzaSelecionada = {}
 monarkSelecionado = {}
@@ -467,4 +470,11 @@ def responder(mensagem):
 /reclamar Reclamar de um pedido🗣
 Ou clique em um dos botões abaixo⬇️:""", reply_markup=markup)
 
+@app.route('/')
+def hello_world():
+    return 'Salve!'
+
 bot.polling()
+
+if __name__ == '__main__':
+    app.run()

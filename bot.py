@@ -466,3 +466,5 @@ def responder(mensagem):
 /sobre Sobre mim🙎🏽‍♂️
 /reclamar Reclamar de um pedido🗣
 Ou clique em um dos botões abaixo⬇️:""", reply_markup=markup)
+
+bot.polling()

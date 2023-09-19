@@ -467,4 +467,9 @@ def responder(mensagem):
 /reclamar Reclamar de um pedido🗣
 Ou clique em um dos botões abaixo⬇️:""", reply_markup=markup)
 
-# bot.polling()
+n = 0
+print(n)
+
+if n == 0:
+    n += 1
+    bot.polling()

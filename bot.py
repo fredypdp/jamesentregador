@@ -6,7 +6,6 @@ from babel.numbers import format_currency
 
 Token = os.environ.get("CHAVE_API")
 bot = telebot.TeleBot(Token)
-bot.polling()
 
 pizzaSelecionada = {}
 monarkSelecionado = {}

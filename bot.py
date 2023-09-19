@@ -6,6 +6,7 @@ from babel.numbers import format_currency
 
 Token = os.environ.get("CHAVE_API")
 bot = telebot.TeleBot(Token)
+bot.polling()
 
 pizzaSelecionada = {}
 monarkSelecionado = {}
@@ -466,5 +467,3 @@ def responder(mensagem):
 /sobre Sobre mim🙎🏽‍♂️
 /reclamar Reclamar de um pedido🗣
 Ou clique em um dos botões abaixo⬇️:""", reply_markup=markup)
-
-bot.polling()
